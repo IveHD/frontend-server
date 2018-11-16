@@ -1,7 +1,11 @@
 {
   "name": "frontend-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "frontend node server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IveHD/frontend-server"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "nodemon node app.js"
