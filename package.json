@@ -8,7 +8,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon node app.js"
+    "build": "gulp js",
+    "dev": "concurrently \"gulp dev\" \"nodemon node app.js\"",
+    "dev:mock": "concurrently \"cross-env API_MOCK=true nodemon node app.js \"  \"gulp dev\""
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "rollup": "^0.67.1",
+    "superagent": "^4.0.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
@@ -32,7 +35,14 @@
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
     "nodemon": "^1.18.6",
-    "rollup-plugin-babel": "^4.0.3"
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-progress": "^0.4.0"
   }
 }

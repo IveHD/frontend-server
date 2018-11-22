@@ -13,6 +13,18 @@
 	{% block body %}
 	<!--body html-->
 	{% endblock %}
-{% for e in require_js %}<script type="text/javascript" src="{{e}}"></script>{% endfor %}    
+{% for e in require_js %}<script type="text/javascript" src="{{e}}"></script>{% endfor %}
+{% for sw in sw_js %}
+    <script type="text/javascript">
+        (function(){
+            window.navigator.serviceWorker.register('./js/sw.js').then(
+            function () {
+                console.log('注册成功')
+            }).catch(err => {
+                console.error("注册失败")
+            });
+        })();
+    </script>
+{% endfor %}
 </body>
 </html>

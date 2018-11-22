@@ -1,0 +1,10 @@
+{
+	"/api/msg": {
+		"code": 200,
+		"message": "success",
+		"result": {
+			"id": 100,
+			"name": "我是来自服务端渲染的数据..."
+		}
+	}
+}

@@ -1,3 +1,3 @@
-const sum = (a, b) => a + b;
-const sub = (a, b) => a - b;
-export {sum, sub}
+export function sum(a, b) {
+	return a + b;
+}
